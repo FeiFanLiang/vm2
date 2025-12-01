@@ -1,0 +1,13 @@
+diff --git a/lib/setup-sandbox.js b/lib/setup-sandbox.js
+index 5e3fb83f28c4e7fbe1cf69014d99abae750d8d6b..1e9bc5295d4f409dbbccaac136b2eb304ff71a4d 100644
+--- a/lib/setup-sandbox.js
++++ b/lib/setup-sandbox.js
+@@ -85,7 +85,7 @@ function localUnexpected() {
+ if (!localReflectSetPrototypeOf(context, localObject.prototype)) throw localUnexpected();
+ 
+ Object.defineProperties(global, {
+-	global: {value: global, writable: true, configurable: true, enumerable: true},
++	window: {value: global, writable: true, configurable: true, enumerable: true},
+ 	globalThis: {value: global, writable: true, configurable: true},
+ 	GLOBAL: {value: global, writable: true, configurable: true},
+ 	root: {value: global, writable: true, configurable: true},

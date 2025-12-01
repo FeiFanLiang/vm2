@@ -1,0 +1,47 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+patchedDependencies:
+  vm2:
+    hash: 8c35d1cf670fb36578ae3896a902d9f50aa6493b8ea54ee2867a314191888d6d
+    path: patches/vm2.patch
+
+importers:
+
+  .:
+    dependencies:
+      vm2:
+        specifier: ^3.10.0
+        version: 3.10.0(patch_hash=8c35d1cf670fb36578ae3896a902d9f50aa6493b8ea54ee2867a314191888d6d)
+
+packages:
+
+  acorn-walk@8.3.4:
+    resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
+    engines: {node: '>=0.4.0'}
+
+  acorn@8.15.0:
+    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  vm2@3.10.0:
+    resolution: {integrity: sha512-3ggF4Bs0cw4M7Rxn19/Cv3nJi04xrgHwt4uLto+zkcZocaKwP/nKP9wPx6ggN2X0DSXxOOIc63BV1jvES19wXQ==}
+    engines: {node: '>=6.0'}
+    hasBin: true
+
+snapshots:
+
+  acorn-walk@8.3.4:
+    dependencies:
+      acorn: 8.15.0
+
+  acorn@8.15.0: {}
+
+  vm2@3.10.0(patch_hash=8c35d1cf670fb36578ae3896a902d9f50aa6493b8ea54ee2867a314191888d6d):
+    dependencies:
+      acorn: 8.15.0
+      acorn-walk: 8.3.4
