@@ -147,6 +147,7 @@ Object.defineProperty(_navigator.__proto__, "cookieEnabled", {
 Object.defineProperty(_navigator.__proto__, "appCodeName", {
   get: function () {
     h_log("_navigator.__proto__ appCodeName get [call]", "arg:", arguments);
+    return 'Mozilla';
   },
   set: undefined,
   enumerable: true,
@@ -155,6 +156,7 @@ Object.defineProperty(_navigator.__proto__, "appCodeName", {
 Object.defineProperty(_navigator.__proto__, "appName", {
   get: function () {
     h_log("_navigator.__proto__ appName get [call]", "arg:", arguments);
+    
   },
   set: undefined,
   enumerable: true,
@@ -171,6 +173,7 @@ Object.defineProperty(_navigator.__proto__, "appVersion", {
 Object.defineProperty(_navigator.__proto__, "platform", {
   get: function () {
     h_log("_navigator.__proto__ platform get [call]", "arg:", arguments);
+    return 'Win32'
   },
   set: undefined,
   enumerable: true,
@@ -187,6 +190,7 @@ Object.defineProperty(_navigator.__proto__, "product", {
 Object.defineProperty(_navigator.__proto__, "userAgent", {
   get: function () {
     h_log("_navigator.__proto__ userAgent get [call]", "arg:", arguments);
+    return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36'
   },
   set: undefined,
   enumerable: true,
@@ -219,6 +223,7 @@ Object.defineProperty(_navigator.__proto__, "onLine", {
 Object.defineProperty(_navigator.__proto__, "webdriver", {
   get: function () {
     h_log("_navigator.__proto__ webdriver get [call]", "arg:", arguments);
+    return false
   },
   set: undefined,
   enumerable: true,

@@ -138,6 +138,7 @@ Object.defineProperty(_document.__proto__.__proto__, "documentElement", {
       "arg:",
       arguments
     );
+    return _jsdom_document.documentElement
   },
   set: undefined,
   enumerable: true,
@@ -213,12 +214,17 @@ Object.defineProperty(_document.__proto__.__proto__, "referrer", {
   enumerable: true,
   configurable: true,
 });
+const cookieJar = {}
 Object.defineProperty(_document.__proto__.__proto__, "cookie", {
   get: function () {
     h_log("_document.__proto__.__proto__ cookie get [call]", "arg:", arguments);
+    return Object.keys(cookieJar).map(key => cookieJar[key]? `${key}=${cookieJar[key]}` : key).join('; ');
   },
-  set: function () {
+  set: function (val) {
     h_log("_document.__proto__.__proto__ cookie set [call]", "arg:", arguments);
+    const [key,value = ''] = val.split('=');
+    cookieJar[key] = value;
+    return val;
   },
   enumerable: true,
   configurable: true,
@@ -3104,6 +3110,7 @@ Object.defineProperty(_document.__proto__.__proto__, "createElement", {
         "arg:",
         arguments
       );
+      return _jsdom_document.createElement(arguments[0])
     };
   },
   enumerable: true,

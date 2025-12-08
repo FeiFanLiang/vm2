@@ -12,6 +12,7 @@
   "license": "ISC",
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
+    "jsdom": "^27.3.0",
     "vm2": "^3.10.0"
   }
 }
